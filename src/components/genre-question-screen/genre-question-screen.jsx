@@ -1,6 +1,6 @@
-import React, { PureComponent } from "react";
+import React, {PureComponent} from "react";
 import PropTypes from "prop-types";
-import { GameType } from "../../const.js";
+import {GameType} from "../../const.js";
 
 
 class GenreQuestionScreen extends PureComponent {
@@ -15,9 +15,9 @@ class GenreQuestionScreen extends PureComponent {
   }
 
   render() {
-    const { onAnswer, question } = this.props;
-    const { answers: userAnswers } = this.state;
-    const { answers, genre} = question;
+    const {onAnswer, question} = this.props;
+    const {answers: userAnswers} = this.state;
+    const {answers, genre} = question;
     return (
       <section className="game game--genre">
         <header className="game__header">
@@ -28,7 +28,7 @@ class GenreQuestionScreen extends PureComponent {
 
           <svg xmlns="http://www.w3.org/2000/svg" className="timer" viewBox="0 0 780 780">
             <circle className="timer__line" cx="390" cy="390" r="370"
-              style={{ filter: `url(#blur)`, transform: `rotate(-90deg) scaleY(-1)`, transformOrigin: `center` }} />
+              style={{filter: `url(#blur)`, transform: `rotate(-90deg) scaleY(-1)`, transformOrigin: `center`}} />
           </svg>
 
           <div className="game__mistakes">
