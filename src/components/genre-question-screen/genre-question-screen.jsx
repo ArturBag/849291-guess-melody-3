@@ -15,7 +15,6 @@ class GenreQuestionScreen extends PureComponent {
   }
 
   render() {
-
     const { onAnswer, question } = this.props;
     const { answers: userAnswers } = this.state;
     const { answers, genre} = question;
@@ -43,11 +42,11 @@ class GenreQuestionScreen extends PureComponent {
           <h2 className="game__title">Выберите {genre} треки</h2>
           <form
             className="game__tracks"
-          >
             onSubmit={(evt) => {
               evt.preventDefault();
               onAnswer(question, this.state.answers);
             }}
+          >
             {answers.map((answer, i) => (
               <div key={`${i}-${answer.src}`} className="track">
                 <button className="track__button track__button--play" type="button"/>
@@ -78,9 +77,7 @@ class GenreQuestionScreen extends PureComponent {
         </section>
       </section>
     );
-
   }
-
 }
 
 GenreQuestionScreen.propTypes = {
@@ -94,5 +91,6 @@ GenreQuestionScreen.propTypes = {
     type: PropTypes.oneOf([GameType.ARTIST, GameType.GENRE]).isRequired,
   }).isRequired,
 };
+
 
 export default GenreQuestionScreen;
