@@ -8,12 +8,11 @@ class GenreQuestionScreen extends PureComponent {
     super(props);
 
     this.state = {
-      answers: [false, false, false, false]
+      answers: [false, false, false, false],
     };
   }
 
   render() {
-
     const {onAnswer, question, renderPlayer} = this.props;
     const {answers: userAnswers} = this.state;
     const {
@@ -68,7 +67,7 @@ GenreQuestionScreen.propTypes = {
     genre: PropTypes.string.isRequired,
     type: PropTypes.oneOf([GameType.ARTIST, GameType.GENRE]).isRequired,
   }).isRequired,
-  renderPlayer: PropTypes.func.isRequired
+  renderPlayer: PropTypes.func.isRequired,
 };
 
 
